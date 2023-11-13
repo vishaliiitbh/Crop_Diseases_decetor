@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Vegetable Buttons</title>
+	<style>
+		body {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			height: 100vh;
+			margin: 0;
+			padding: 0;
+			background: url(https://w0.peakpx.com/wallpaper/837/398/HD-wallpaper-yellow-green-field-during-sunset-field-sunset-grass-nature-graphy.jpg) no-repeat;
+            background-position: center;
+            background-size: cover;
+            min-height: 100vh;
+            width: 100%;
+		}
+		.btn-group {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			margin-bottom: 30px;
+		}
+		.btn {
+			display: inline-block;
+			margin: 10px;
+			padding: 30px 40px;
+			background-color: transparent;
+			color: rgb(15, 14, 14);
+			border: none;
+			border-radius: 10px;
+			cursor: pointer;
+			transition: all 0.2s ease-in-out;
+		}
+		.btn:hover {
+			transform: scale(1.2);
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+		}
+
+		a:link {
+  color: rgb(0, 0, 0);
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+	color: rgb(0, 0, 0);
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+	color: rgb(0, 0, 0);
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+a:active {
+	color: rgb(0, 0, 0);
+  background-color: transparent;
+  text-decoration: underline;
+}
+	</style>
+</head>
+<body>
+	<h1>Choose Vegetable</h1>
+	<div class="btn-group">
+		<button class="btn"><a href="/upload_cassava"><h1>Cassava</h1></a></button>
+		<button class="btn"><a href="/upload_potato"><h1>Potato</h1></a></button>
+		<button class="btn"><a href="/upload_tomato"><h1>Tomato</h1></a></button>
+		<button class="btn"><a href="/upload_cauliflower"><h1>Cauliflower</h1></a></button>
+		<button class="btn"><a href="/upload_okra"><h1>Okra</h1></a></button>
+		<button class="btn"><a href="/upload_cabbage"><h1>Cabbage</h1></a></button>
+	</div>
+	<h3>This is an AI based website, which can predict various diseases related to commonly grown crops.<br>
+	 User can select and upload image of the crop's leaf. Our AI models will predict the <br>
+	 likelihood of a disease the crop might have with a certain surity.</h3>
+	<script>
+		// code for button hover effect
+		const buttons = document.querySelectorAll('.btn');
+		buttons.forEach(btn => {
+			btn.addEventListener('mouseover', () => {
+				btn.style.transform = 'scale(1.2)';
+				btn.style.boxShadow = '0 0 10px rgba(0, 0, 0, 0.5)';
+			});
+			btn.addEventListener('mouseout', () => {
+				btn.style.transform = 'scale(1)';
+				btn.style.boxShadow = 'none';
+			});
+		});
+	</script>
+</body>
+</html>
